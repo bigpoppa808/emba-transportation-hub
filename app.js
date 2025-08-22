@@ -33,7 +33,16 @@ class TransportationHub {
 
     loadEntries() {
         const stored = localStorage.getItem(this.storageKey);
-        return stored ? JSON.parse(stored) : [];
+        if (!stored) return [];
+        
+        try {
+            const entries = JSON.parse(stored);
+            // Filter out any invalid entries
+            return entries.filter(entry => entry && entry.id);
+        } catch (e) {
+            console.error('Error loading entries:', e);
+            return [];
+        }
     }
 
     saveEntries() {
@@ -123,16 +132,17 @@ class TransportationHub {
         }) : '';
 
         const formattedTime = this.formatTime(entry.time);
+        const dateTimeDisplay = formattedDate && formattedTime ? 
+            `📅 ${formattedDate} at ${formattedTime}` : 
+            (formattedDate ? `📅 ${formattedDate}` : '');
 
         return `
             <div class="travel-card">
                 <button class="delete-btn" data-id="${entry.id}" title="Delete entry">×</button>
                 <div class="card-header">
-                    <span class="card-type type-${entry.type}">${typeLabels[entry.type]}</span>
+                    <span class="card-type type-${entry.type}">${typeLabels[entry.type] || 'Unknown'}</span>
                 </div>
-                <div class="card-datetime">
-                    📅 ${formattedDate} at ${formattedTime}
-                </div>
+                ${dateTimeDisplay ? `<div class="card-datetime">${dateTimeDisplay}</div>` : ''}
                 <div class="card-route">
                     <div class="route-point">
                         <div class="route-label">From</div>
@@ -167,6 +177,7 @@ class TransportationHub {
     }
 
     escapeHtml(text) {
+        if (!text) return '';
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
