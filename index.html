@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCLA Anderson EMBA 2027 - Transportation Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <span class="ucla-badge">UCLA Anderson</span>
+                    <h1>EMBA 2027 Transportation Hub</h1>
+                </div>
+                <p class="tagline">Coordinate rides, share flights, and travel together</p>
+            </div>
+        </header>
+
+        <main>
+            <!-- Add New Entry Section -->
+            <section class="add-section">
+                <h2>Share Your Travel Plans</h2>
+                <form id="transportForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required placeholder="e.g., John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone (Optional)</label>
+                            <input type="tel" id="phone" placeholder="e.g., +1 (555) 123-4567">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="type">Type</label>
+                            <select id="type" required>
+                                <option value="">Select type...</option>
+                                <option value="offering-ride">Offering Ride</option>
+                                <option value="seeking-ride">Seeking Ride</option>
+                                <option value="rideshare-split">Rideshare/Uber Split</option>
+                                <option value="flight-info">Flight Info</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <input type="time" id="time" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="from">From</label>
+                            <input type="text" id="from" required placeholder="e.g., UCLA Campus">
+                        </div>
+                        <div class="form-group">
+                            <label for="to">To</label>
+                            <input type="text" id="to" required placeholder="e.g., LAX">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="details">Additional Details</label>
+                        <textarea id="details" rows="3" placeholder="e.g., Flight number, preferred route, number of seats available, luggage space..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Share Travel Info</button>
+                </form>
+            </section>
+
+            <!-- Filter Section -->
+            <section class="filter-section">
+                <h2>Browse Travel Plans</h2>
+                <div class="filter-controls">
+                    <select id="filterType" class="filter-select">
+                        <option value="all">All Types</option>
+                        <option value="offering-ride">Offering Ride</option>
+                        <option value="seeking-ride">Seeking Ride</option>
+                        <option value="rideshare-split">Rideshare/Uber Split</option>
+                        <option value="flight-info">Flight Info</option>
+                    </select>
+                    <input type="date" id="filterDate" class="filter-date" placeholder="Filter by date">
+                    <button id="clearFilters" class="btn btn-secondary">Clear Filters</button>
+                </div>
+            </section>
+
+            <!-- Listings Section -->
+            <section class="listings-section">
+                <div id="listings" class="listings-grid">
+                    <!-- Dynamically populated -->
+                </div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>No travel plans found. Be the first to share!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>UCLA Anderson EMBA 2027 - Stay connected, travel together</p>
+            <p class="disclaimer">Note: All data is stored locally in your browser. Clear browser data to remove all entries.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
