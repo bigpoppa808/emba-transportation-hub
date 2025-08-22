@@ -116,11 +116,11 @@ class TransportationHub {
             'flight-info': 'Flight Info'
         };
 
-        const formattedDate = new Date(entry.date).toLocaleDateString('en-US', {
+        const formattedDate = entry.date ? new Date(entry.date).toLocaleDateString('en-US', {
             weekday: 'short',
             month: 'short',
             day: 'numeric'
-        });
+        }) : '';
 
         const formattedTime = this.formatTime(entry.time);
 
@@ -158,6 +158,7 @@ class TransportationHub {
     }
 
     formatTime(time) {
+        if (!time) return '';
         const [hours, minutes] = time.split(':');
         const hour = parseInt(hours);
         const ampm = hour >= 12 ? 'PM' : 'AM';
