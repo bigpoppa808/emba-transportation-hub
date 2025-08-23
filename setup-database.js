@@ -4,7 +4,7 @@
 const https = require('https');
 
 const SUPABASE_URL = 'nscqhnqpmnqecruzhphq.supabase.co';
-const SERVICE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zY3FobnFwbW5xZWNydXpocGhxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NTkwMzUwNCwiZXhwIjoyMDcxNDc5NTA0fQ.X6VVTa8tGFo4Q-ZfD1WKs5qpe0R3F-hbZ3j3GK8KcoU';
+const SERVICE_KEY = 'YOUR_SERVICE_KEY_HERE'; // Never commit actual service keys
 
 const sql = `
 -- Create the transportation table
