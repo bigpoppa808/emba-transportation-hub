@@ -1,44 +1,44 @@
 # UCLA Anderson EMBA 2027 Transportation Hub
 
-A simple web application for EMBA classmates to coordinate transportation, share rides, and split travel costs.
+A shared web application for UCLA Anderson EMBA 2027 classmates to coordinate transportation, share rides, and travel together.
+
+## 🚀 Live App
+
+**[https://bigpoppa808.github.io/emba-transportation-hub/](https://bigpoppa808.github.io/emba-transportation-hub/)**
 
 ## Features
 
-- **No Authentication Required** - Open access for all classmates
+- **Real-time Shared Database** - All classmates see the same travel plans
+- **No Authentication** - Open access for all EMBA 2027 students
 - **Multiple Transportation Types**:
   - Offer rides
   - Request rides
   - Split Uber/Lyft costs
   - Share flight information
-- **Local Storage** - All data stored in browser (no server needed)
-- **Responsive Design** - Works on desktop and mobile
-- **Easy Filtering** - Filter by type and date
+- **Auto-refresh** - Updates every 10 seconds
+- **Mobile Responsive** - Works on all devices
 
-## Deployment on GitHub Pages
+## How to Use
 
-1. Create a new GitHub repository
-2. Upload all files (index.html, styles.css, app.js)
-3. Go to Settings → Pages
-4. Source: Deploy from a branch
-5. Branch: main (or master)
-6. Folder: / (root)
-7. Click Save
-8. Your site will be available at: `https://[your-username].github.io/[repository-name]/`
-
-## Usage
-
-1. **Add Travel Plans**: Fill out the form with your travel details
-2. **Browse**: View all shared travel plans
-3. **Filter**: Use filters to find specific types or dates
-4. **Contact**: Reach out to classmates directly using provided contact info
-
-## Data Storage
-
-All data is stored locally in your browser using localStorage. To clear all entries, clear your browser data or use browser developer tools.
+1. **Share Your Plans**: Fill out the form with your transportation details
+2. **See Everyone's Plans**: All entries are visible to all classmates
+3. **Connect**: Contact classmates using provided phone numbers
+4. **Filter**: Find specific types of transportation or dates
 
 ## Tech Stack
 
-- Pure HTML/CSS/JavaScript
-- No frameworks or dependencies
-- localStorage for data persistence
-- GitHub Pages for hosting
+- HTML/CSS/JavaScript
+- Supabase (PostgreSQL database with real-time sync)
+- GitHub Pages hosting
+- No authentication required
+
+## For EMBA 2027 Classmates
+
+This is our shared transportation coordination tool. Please:
+- Be respectful and only delete your own entries
+- Keep contact information professional
+- Update your plans if they change
+
+## Support
+
+For issues or suggestions, contact the EMBA 2027 tech team or open an issue in this repository.
