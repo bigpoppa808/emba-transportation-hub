@@ -2,7 +2,7 @@ class TransportationHub {
     constructor() {
         // Supabase configuration
         this.supabaseUrl = 'https://nscqhnqpmnqecruzhphq.supabase.co';
-        this.supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zY3FobnFwbW5xZWNydXpocGhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU5MDM1MDQsImV4cCI6MjA3MTQ3OTUwNH0.mKkshyzUuV3I0dqg-RN0Q6O5eXzSFK0KHDOOLlX6qRg';
+        this.supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5zY3FobnFwbW5xZWNydXpocGhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU5MDM1MDQsImV4cCI6MjA3MTQ3OTUwNH0.5PV6RfISCHpemk_deoCb0HA0-aK5UQUpOxoxNHhITHc';
         
         this.entries = [];
         this.init();
